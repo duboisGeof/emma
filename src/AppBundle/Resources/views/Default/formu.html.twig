@@ -1,0 +1,15 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% from "PHPKTemplateBundle::import.html.twig" import phpk %}
+
+{% block body %}
+    <div class="section">
+	<span class="legende">P PN = Progres PN</span> <br>
+	<span class="legende">PEMM = PE EDI M-M</span>
+	{{
+		phpk('tableau', {tableau: ListeAssure, filter: false, affichageLignesTrouvees: true, pagination: 'both', title: 'Gestion des Assurés'})
+	}}
+		<div class="center">
+		{{ phpk('bouton',{ label: "Envoyer les courriers",  image: "transmettre", predefined:'confirmer', url: path('verifier_envoi_courrier'), confirmtext: "Êtes-vous sûr de vouloir envoyer les courriers ?"}) }}
+	    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+#APPBundle\Entity\Agent:
+#    constraints:
+#        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+#            fields: [ numero, caisse ]
+#            message: "Ce n°Agent est déjà utilisé"
+#    properties:
+#        nom:
+#            - NotBlank: { message: "Vous devez renseigner le nom de l'agent" }
+#            - CNAMTS\PHPK\CoreBundle\Validator\Constraints\ExtendedString: ~
+#            - Length:
+#                max: 50
+#                maxMessage: "Le nom ne doit pas dépasser 50 caractères"
+#        numero:
+#            - NotBlank: { message: "Vous devez renseigner le numéro agent" }
+#            - Length:
+#                min: 5
+#                max: 5
+#                exactMessage: "Le numéro agent doit comporter 5 chiffres"
+

@@ -1,0 +1,42 @@
+app_index:
+    path: /
+    defaults: { _controller: 'AppBundle:Default:index' }
+formu:
+    path: /formu
+    defaults: { _controller: 'AppBundle:Formu:formu' }
+gestion_csv:
+    path: /gestion_csv
+    defaults: { _controller: 'AppBundle:GestionCSV:index' }
+imprime:
+    path: /imprime
+    defaults: { _controller: 'AppBundle:Impression:imprime' }
+form_assure_modif:
+    path: /form_assure_modif/{nir}
+    defaults: { _controller: 'AppBundle:ModifAssure:index' }
+valid_form_assure_modifAjax:
+    path: /valid_form_assure_modifAjax
+    defaults: { _controller: 'AppBundle:ValidModifAssureAjax:indexAjax' }
+    options:
+        expose: true
+form_assure_suppr:
+    path: /form_assure_suppr/{nir}
+    defaults: { _controller: 'AppBundle:SupprAssure:index' }
+valid_form_assure_supprAjax:
+    path: /valid_form_assure_supprAjax
+    defaults: { _controller: 'AppBundle:ValidSupprAssureAjax:indexAjax' }
+    options:
+        expose: true
+verifier_envoi_courrier:
+    path: /verifier_envoi_courrier
+    defaults: { _controller: 'AppBundle:VerifierEnvoi:index'}
+    options:
+        expose: true
+recharge_integration:
+    path: /recharge_integration
+    defaults: { _controller: 'AppBundle:RechargeIntegration:index' }
+stats_3202:
+    path: /stats_3202
+    defaults: { _controller: 'AppBundle:Statistique3202:index' }
+detail_stats_3202:
+    path: /detail_stats_3202/{date}
+    defaults: { _controller: 'AppBundle:DetailStatistique3202:index' }

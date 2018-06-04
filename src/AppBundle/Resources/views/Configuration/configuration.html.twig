@@ -1,0 +1,24 @@
+{% extends "AppBundle::layout.html.twig" %}
+{% from "PHPKTemplateBundle::import.html.twig" import phpk %}
+{% block body %}
+
+	<div id="detailDiv">
+		&nbsp;
+		test
+	</div>
+     <div class="formPHPK">
+	{{
+	   phpk('formulaire', { form: form, center: true, inline: false, title: 'Le formulaire A Pascal ' }) 
+	}}
+    </div>
+	
+  
+	
+    <div class="section">
+	{{
+		 phpk('tableau', {tableau: ListeAssurePrn, filter: false, affichageLignesTrouvees: false})
+	}}
+    </div>
+	
+{% endblock %}
+

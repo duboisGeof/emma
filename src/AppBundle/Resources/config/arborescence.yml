@@ -1,0 +1,37 @@
+# Modifiez ce fichier pour qu'il corresponde à votre application
+phpk_core:
+     arborescence:
+        exemple_accueil:
+            libelle: 3202
+            fils:
+                form:
+                    libelle: Gestion des courriers assurés
+                    habilitations: [ 'EMMA_ADM','EMMA_SUPERUTIL' ]
+                    route: formu
+                gestion_csv:
+                    libelle: Gestion des CSV
+                    habilitations: [ 'EMMA_ADM','EMMA_SUPERUTIL' ]
+                    route: gestion_csv
+        #        exemple_menu2:
+        #            libelle: configurer
+        #        exemple_menu3:
+        #            libelle: le fichier
+        #        exemple_menu4:
+        #            libelle: arborescence.yml
+        #exemple_sous_menu:
+        #    libelle: Sous-menu
+        #    # Requiert des habilitations particulières, n'est donc pas visible
+        #    habilitations: [ XXX_XXX ]
+        #    fils:
+        #        exemple_sous_menu1:
+        #            libelle: Sous-menu 1
+        #        exemple_sous_menu2:
+        #            libelle: Sous-menu 2
+        #            fils:
+        #                exemple_sous_menu21:
+        #                    libelle: Sous-menu 21
+        #                exemple_sous_menu22:
+        #                    libelle: Sous-menu 22
+        
+
+# Vous pouvez également configurer phpk_core.interapplications et phpk_core.outils dans ce fichier si vous le souhaitez

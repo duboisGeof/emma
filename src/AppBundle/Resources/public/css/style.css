@@ -1,0 +1,29 @@
+#detailDiv{
+	display: none;
+}
+.icone-pictogramme-corbeille\.png{
+	cursor: pointer !important;
+}
+
+.tab-box td{
+	padding: 0 10px 0 10px !important;
+}
+
+.legende{
+	font-style: italic;
+}
+
+.nav-horizontal .niveau1{
+	background: #2d6876 !important;
+}
+
+.nav-horizontal .niveau1 a{
+	background: #2d6876 !important;
+}
+.nav-horizontal .niveau2 a{
+	color: white !important;
+}
+
+.nav-horizontal .niveau2 .courant{
+	color:#2d6876 !important;
+}

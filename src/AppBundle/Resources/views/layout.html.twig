@@ -1,0 +1,27 @@
+{% extends "PHPKTemplateBundle::layout.html.twig" %}
+{% from "PHPKTemplateBundle::import.html.twig" import phpk %}
+
+
+{% block head %}
+{% block stylesheets %}
+	{% stylesheets filter='cssrewrite'
+		'@AppBundle/Resources/public/css/*' 
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	
+	{% endstylesheets %}
+	{% endblock %}
+    {{ parent() }}
+   	{% javascripts
+		'@AppBundle/Resources/public/js/jquery_min.js'
+		'@AppBundle/Resources/public/js/jquery-ui.min.js'
+		'@AppBundle/Resources/public/js/emma.js'
+	%}
+	<script type="text/javascript" src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+    <script type="text/javascript">
+        // Cohabitation possible en utilisant « jQuery » au lieu de « $ », qui reste affecté à Mootools
+        jQuery.noConflict();
+    </script>
+{% endblock head %}
+

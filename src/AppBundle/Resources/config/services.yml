@@ -1,0 +1,9 @@
+services:
+    acme.doctrine.dbal.events.oracle_session_init.listener:
+        class: %doctrine.dbal.events.oracle_session_init.class%
+        tags:
+            - { name: doctrine.event_listener, event: postConnect }
+    acme.doctrine.dbal.oracle_platform.type_mapping.listener:
+        class: CNAMTS\EDIPE2\Bundle\Listener\OracleDoctrineTypeMappingListener
+        tags:
+            - { name: doctrine.event_listener, event: postConnect }
